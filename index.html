@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Styles-->
+   <link rel="stylesheet" href="styles/style.css">
+   <!--Bootstrap CDN-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <title>Library</title>
+</head>
+
+<body>
+   
+
+   <div class="container">
+      <div class="d-flex flex-column justify-content-center align-items-center" id="form">
+         <div class="d-flex flex-column align-items-center justify-content-center">
+            <h1>Library</h1>
+            <h4>Give us the book info!</h4>
+            <p>Fields with * are required.</p>
+         </div>
+         <form action="" method="post" class="d-flex flex-column justify-content-center align-items-center mb-5">
+            <ul>
+               <li class="form-row">
+                  <label for="title"><span aria-required="true">* </span>Title</label>
+                  <input type="text" name="title" id="title" placeholder="The book's title..." required>
+               </li>
+               <li class="form-row">
+                  <label for="author"><span aria-required="true">* </span>Author</label>
+                  <input type="text" name="author" id="author" placeholder="The book's author..." required>
+               </li>
+               <li class="form-row">
+                  <label for="pages"><span aria-required="true">* </span>Pages</label>
+                  <input type="number" name="pages" id="pages" placeholder="The number of pages..." required>
+               </li>
+               <li class="form-row">
+                  <label for="isRead"><span aria-required="false"></span>Have you read?</label>
+                  <input type="checkbox" name="isRead" id="isRead">
+               </li>
+            </ul>
+            <button class="btn btn-success" id="submit" type="button">Submit</button>
+         </form>
+      </div>
+      <div class="table">
+         
+         <div class="table-wrapper">
+            <table class="table table-stripped table-hover">
+               <thead>
+                  <tr id="classes">
+                     <th>#</th>
+                     <th>Title</th>
+                     <th>Author</th>
+                     <th>Pages</th>
+                     <th>Read</th>
+                     <th>Mark Read</th>
+                     <th>Remove</th>
+                  </tr>
+               </thead>
+               <tbody id="t-body">
+                  <!-- <tr>
+                     <td>1</td>
+                     <td>asdasd</td>
+                     <td>sdsdf</td>
+                     <td>sdfsdf</td>
+                     <td>asdsdf</td>
+                     <td><button id="markRead" class="btn btn-warning" type="button">Mark Read</button></td>
+                     <td><button id="remove" class="btn btn-danger" type="button">Remove</button></td>
+                  </tr> -->
+               <tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+
+   <script src="js/app.js"></script>
+</body>
+
+</html>
