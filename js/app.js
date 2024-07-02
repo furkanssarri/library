@@ -89,7 +89,7 @@ function addBookToLibrary(title, author, pages, isRead) {
    const newBook = new Book(title, author, pages, isRead)
    library.push(newBook);
    // setLocalStorage(newBook)
-   
+
    // localStorage.setItem("library", JSON.stringify(library));
    // console.log(newBook);
    // console.log(library);
@@ -104,43 +104,43 @@ function displayEachBook(library) {
    tBody.textContent = "";
    library.forEach(book => {
       let newTRow = document.createElement("tr");
-         let idCell = document.createElement("td");
-         idCell.textContent = book.id;
-         let titleCell = document.createElement("td");
-         titleCell.textContent = book.title;
-         let authorCell = document.createElement("td");
-         authorCell.textContent = book.author;
-         let pageCell = document.createElement("td");
-         pageCell.textContent = book.pages;
-         let isReadCell = document.createElement("td");
-         isReadCell.textContent = book.isRead ? "Read" : "Not read";
-         let markReadCell = document.createElement("td");
-         let markReadBtn = document.createElement("button");
-         markReadBtn.setAttribute("type", "button");
-         markReadBtn.classList = "btn btn-warning";
-         markReadBtn.id = "markRead"
-         markReadBtn.textContent = book.isRead ? "Mark Not Read" : "Mark Read";
-         markReadCell.appendChild(markReadBtn);
-         let removeCell = document.createElement("td");
-         let removeBtn = document.createElement("button");
-         removeBtn.classList = "btn btn-danger";
-         removeBtn.id = "remove";
-         removeBtn.setAttribute("type", "button");
-         removeBtn.textContent = "Remove";
-         removeCell.appendChild(removeBtn);
+      let idCell = document.createElement("td");
+      idCell.textContent = book.id;
+      let titleCell = document.createElement("td");
+      titleCell.textContent = book.title;
+      let authorCell = document.createElement("td");
+      authorCell.textContent = book.author;
+      let pageCell = document.createElement("td");
+      pageCell.textContent = book.pages;
+      let isReadCell = document.createElement("td");
+      isReadCell.textContent = book.isRead ? "Read" : "Not read";
+      let markReadCell = document.createElement("td");
+      let markReadBtn = document.createElement("button");
+      markReadBtn.setAttribute("type", "button");
+      markReadBtn.classList = "btn btn-warning";
+      markReadBtn.id = "markRead"
+      markReadBtn.textContent = book.isRead ? "Mark Not Read" : "Mark Read";
+      markReadCell.appendChild(markReadBtn);
+      let removeCell = document.createElement("td");
+      let removeBtn = document.createElement("button");
+      removeBtn.classList = "btn btn-danger";
+      removeBtn.id = "remove";
+      removeBtn.setAttribute("type", "button");
+      removeBtn.textContent = "Remove";
+      removeCell.appendChild(removeBtn);
 
 
-         newTRow.appendChild(idCell);
-         newTRow.appendChild(titleCell);
-         newTRow.appendChild(authorCell);
-         newTRow.appendChild(pageCell);
-         newTRow.appendChild(isReadCell);
-         newTRow.appendChild(markReadCell);
-         newTRow.appendChild(removeCell);
-         tBody.appendChild(newTRow);
+      newTRow.appendChild(idCell);
+      newTRow.appendChild(titleCell);
+      newTRow.appendChild(authorCell);
+      newTRow.appendChild(pageCell);
+      newTRow.appendChild(isReadCell);
+      newTRow.appendChild(markReadCell);
+      newTRow.appendChild(removeCell);
+      tBody.appendChild(newTRow);
 
-         markReadBtn.addEventListener("click", markBookRead);
-         removeBtn.addEventListener("click", removeItem);
+      markReadBtn.addEventListener("click", markBookRead);
+      removeBtn.addEventListener("click", removeItem);
    });
 }
 
@@ -149,7 +149,7 @@ function clearInputs() {
       element.firstElementChild.nextElementSibling.value = "";
       element.firstElementChild.nextElementSibling.checked = false;
    });
-   
+
 }
 
 function markBookRead(e) {
